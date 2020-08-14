@@ -8,6 +8,9 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
+      - name: Build Theme
+        working-directory: src
+        run: npm install
       - name: Deploy Ghost Theme
         uses: TryGhost/action-deploy-theme@v1.4.0
         with:
